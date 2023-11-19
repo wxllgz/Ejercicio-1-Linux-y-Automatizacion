@@ -1,6 +1,6 @@
 #!/bin/bash
 #Variable
-repo="bootcamp-devops-2023"
+repo="Ejercicio-1-Linux-y-Automatizaci-n"
 USERID=$(id -u)
 
 echo "//=========================================//"
@@ -168,12 +168,12 @@ echo ""
 if [[ -d $repo ]]; then
     echo -e "El repositorio ${repo} ya existe"
     cd ${repo}
-    git pull origin clase2-linux-bash
+    git pull origin bootcamp-devops-2023
 else
     echo -e "Clonando el repositorio"
-    git clone https://github.com/roxsross/$repo.git
+    git clone https://github.com/wxllgz/$repo.git
     cd ${repo}
-    git pull origin clase2-linux-bash
+    git pull origin bootcamp-devops-2023
     echo $repo
 fi
 echo ""
