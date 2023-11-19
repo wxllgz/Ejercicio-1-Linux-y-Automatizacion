@@ -7,7 +7,6 @@ echo "//=========================================//"
 echo "//============Inicio del Script============//"
 echo "//=========================================//"
 echo ""
-echo ""
 
 #Verificando ejecucion con usuario ROOT
 
@@ -20,9 +19,7 @@ fi
 #Verificando actualizacion de sistema
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Actualizando Sistema..."
@@ -30,17 +27,13 @@ echo -e "Actualizando Sistema..."
 echo -e "El sistema fue actualizado..."
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Comprobando Instalacion de GIT
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Comprobando instalacion de GIT..."
@@ -51,17 +44,13 @@ else
     apt install -y git
 fi
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Comprobando instalacion de MariaDB
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 echo -e "Comprobando instalacion de MariDB..."
 if dpkg -l | grep mariadb-server; then
@@ -73,17 +62,13 @@ else
     systemctl enable mariadb
 fi
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Coprobando Instalacion de APACHE2
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Comprobando instalacion de Apache2..."
@@ -103,17 +88,13 @@ fi
 sed -i 's/index.html/index.php index.html/g' /etc/apache2/mods-enabled/dir.conf
 systemctl reload apache2
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Configurando Base de Datos
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Comprobando base de datos"
@@ -125,17 +106,13 @@ else
         echo -e "La base de datos fue creada"
 fi
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Creando usuario de base de datos
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Usuario de base de datos"
@@ -152,17 +129,13 @@ fi
 echo -e "La base de datos fue creada y configurada con exito"
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Clonacion del repositorio
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 if [[ -d $repo ]]; then
@@ -176,18 +149,15 @@ else
     git pull origin clase2-linux-bash
     echo $repo
 fi
-echo ""
+
 echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Copiando los archivos de la web
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Copiando los archivos para ejecucion"
@@ -197,17 +167,13 @@ cp -r ~/${repo}/app-295devops-travel/* /var/www/html
 echo -e "Archivos copiados"
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Cargado datos a la base de datos
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Cargando datos a la base"
@@ -217,17 +183,13 @@ mysql < ~/$repo/app-295devops-travel/database/devopstravel.sql
 echo -e "La base de datos fue cargada"
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Confifuracion de contraseña de la Base
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Ingrese la contraseña de la  base de datos"
@@ -235,27 +197,20 @@ echo -e "Ingrese la contraseña de la  base de datos"
     nano /var/www/html/config.php
     systemctl reload apache2
 
-
-echo ""
 echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 #Deploy
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 echo -e "Pruebe la pagina ingrasando a: http://localhost o http://ip"
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 
 # Configura el token de acceso de tu bot de Discord
@@ -303,15 +258,11 @@ curl -X POST -H "Content-Type: application/json" \
      }' "$DISCORD"
 
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 echo -e "Enviando notificacion a Discord"
 echo ""
-echo ""
 echo "//=========================================//"
-echo ""
 echo ""
 echo "//==========================================//"
 echo "//==============Fin del Script==============//"
