@@ -1,6 +1,6 @@
 #!/bin/bash
 #Variable
-repo="bootcamp-devops-2023"
+repo="Ejercicio-1-Linux-y-Automatizacion"
 USERID=$(id -u)
 
 echo "//=========================================//"
@@ -141,12 +141,12 @@ echo ""
 if [[ -d $repo ]]; then
     echo -e "El repositorio ${repo} ya existe"
     cd ${repo}
-    git pull origin clase2-linux-bash
+    git pull origin bootcamp-devops-2023
 else
     echo -e "Clonando el repositorio"
-    git clone https://github.com/roxsross/$repo.git
+    git clone https://github.com/wxllgz/$repo.git
     cd ${repo}
-    git pull origin clase2-linux-bash
+    git pull origin bootcamp-devops-2023
     echo $repo
 fi
 
@@ -214,7 +214,7 @@ echo "//=========================================//"
 echo ""
 
 # Configura el token de acceso de tu bot de Discord
-DISCORD="https://discord.com/api/webhooks/1169002249939329156/7MOorDwzym-yBUs3gp0k5q7HyA42M5eYjfjpZgEwmAx1vVVcLgnlSh4TmtqZqCtbupov"
+DISCORD="https://discord.com/api/webhooks/1154865920741752872/au1jkQ7v9LgQJ131qFnFqP-WWehD40poZJXRGEYUDErXHLQJ_BBszUFtVj8g3pu9bm7h"
 
 # Verifica si se proporcionó el argumento del directorio del repositorio
 #if [ $# -ne 1 ]; then
