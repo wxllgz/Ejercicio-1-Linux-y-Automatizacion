@@ -168,12 +168,12 @@ echo ""
 if [[ -d $repo ]]; then
     echo -e "El repositorio ${repo} ya existe"
     cd ${repo}
-    git pull origin bootcamp-devops-2023
+    git pull origin clase2-linux-bash
 else
     echo -e "Clonando el repositorio"
-    git clone https://github.com/wxllgz/$repo.git
+    git clone https://github.com/roxsross/$repo.git
     cd ${repo}
-    git pull origin bootcamp-devops-2023
+    git pull origin clase2-linux-bash
     echo $repo
 fi
 echo ""
